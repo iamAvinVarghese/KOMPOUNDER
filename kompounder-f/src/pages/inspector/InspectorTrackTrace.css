@@ -1,0 +1,152 @@
+/* Inspector Track & Trace Page Layout */
+.inspector-track-trace-view {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Header */
+.trace-page-header {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(7, 25, 51, 0.04);
+  margin-bottom: 28px;
+}
+
+.trace-page-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 4px 0;
+}
+
+.trace-page-subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 680px;
+}
+
+.trace-header-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Dual Selector Card */
+.trace-selector-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(7, 25, 51, 0.04);
+  margin-bottom: 28px;
+}
+
+.selector-group-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.trace-dropdown-select {
+  padding: 8px 14px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-background);
+  color: var(--color-primary-dark);
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  transition: border-color var(--transition-fast);
+}
+
+.trace-dropdown-select:focus {
+  border-color: var(--color-secondary);
+}
+
+/* Summary Card & Irregularity Box */
+.trace-summary-card {
+  margin-bottom: 28px;
+  border: 1px solid var(--color-secondary-light);
+}
+
+.trace-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 20px 24px;
+}
+
+.trace-irregularity-box {
+  background-color: rgba(180, 83, 9, 0.05);
+  border-top: 1px solid rgba(180, 83, 9, 0.2);
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.irregularity-top-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.irregularity-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-warning);
+  letter-spacing: 0.05em;
+}
+
+.irregularity-time {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.irregularity-msg {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+/* Audit Ledger Table */
+.trace-ledger-card {
+  margin-bottom: 28px;
+}
+
+.event-type-chip {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background-color: rgba(15, 46, 89, 0.06);
+  color: var(--color-primary);
+  border: 1px solid rgba(15, 46, 89, 0.12);
+}
+
+.qty-minus {
+  color: var(--color-danger);
+}
+
+.qty-plus {
+  color: var(--color-success);
+}
+
+.qty-zero {
+  color: var(--color-text-muted);
+}

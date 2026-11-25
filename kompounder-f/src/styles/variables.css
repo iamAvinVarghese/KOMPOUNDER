@@ -1,0 +1,109 @@
+:root {
+  /* Premium Day Theme: High-End Architectural Monochrome (White & Black) */
+  --color-primary: #09090b;       /* Jet obsidian black */
+  --color-primary-light: #27272a; /* Soft charcoal */
+  --color-primary-dark: #000000;  /* Pitch black */
+  
+  --color-secondary: #18181b;     /* Refined high-contrast dark accent */
+  --color-secondary-light: #3f3f46;
+  
+  /* Neutral Monochrome Palette (Day Mode) */
+  --color-background: #f8fafc;    /* Clean luxury studio off-white */
+  --color-surface: #ffffff;       /* Pure architectural card surface */
+  --color-surface-hover: #f1f5f9; /* Subtle soft surface hover */
+  --color-border: #e2e8f0;        /* Razor-thin subtle border */
+  --color-border-hover: #94a3b8;  /* Graphite hover border */
+  
+  /* Text System (Day: High-contrast Jet Black & Platinum Slates) */
+  --color-text-primary: #09090b;  /* Pure black readability */
+  --color-text-secondary: #475569;/* Balanced charcoal */
+  --color-text-muted: #64748b;    /* Neutral steel */
+  --color-text-light: #ffffff;    /* Text on dark backgrounds */
+
+  /* Status Colors (Ultra-sleek Monochrome Tags) */
+  --color-success: #09090b;
+  --color-success-bg: #f1f5f9;
+  --color-warning: #1e293b;
+  --color-warning-bg: #f1f5f9;
+  --color-danger: #09090b;
+  --color-danger-bg: #f1f5f9;
+  --color-info: #09090b;
+  --color-info-bg: #f1f5f9;
+
+  /* Typography */
+  --font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.85rem;
+  --font-size-md: 0.95rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.35rem;
+  --font-size-xxl: 1.65rem;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing (8px Grid System) */
+  --spacing-xs: 0.25rem;  /* 4px */
+  --spacing-sm: 0.5rem;   /* 8px */
+  --spacing-md: 1rem;     /* 16px */
+  --spacing-lg: 1.5rem;   /* 24px */
+  --spacing-xl: 2rem;     /* 32px */
+  --spacing-xxl: 3rem;    /* 48px */
+
+  /* Layout Dimensions */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 72px;
+  --header-height: 64px;
+
+  /* Borders & Shadows */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.03), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 16px 36px -4px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Premium Dark Theme: Complete Deep Obsidian & Diamond White (Night Mode) */
+[data-theme='dark'] {
+  --color-primary: #ffffff;
+  --color-primary-light: #f4f4f5;
+  --color-primary-dark: #ffffff;  /* Must be white in dark mode so text using it is fully visible! */
+
+  --color-secondary: #ffffff;
+  --color-secondary-light: #e4e4e7;
+
+  /* Neutral Dark Palette - True Premium Obsidian & Onyx */
+  --color-background: #000000;    /* Complete OLED pitch black */
+  --color-surface: #0f0f12;       /* Deep Obsidian Card Surfaces, clearly visible over #000000 */
+  --color-surface-hover: #1c1c22; /* Elevated contrast on hover */
+  --color-border: #27272a;        /* Crisp perimeter outline */
+  --color-border-hover: #52525b;  /* Elevated line */
+
+  /* Text System Dark (Pure Crisp Diamond White & Silvers) */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d4d4d8;/* High-contrast readable secondary */
+  --color-text-muted: #a1a1aa;    /* Clearly readable muted text */
+  --color-text-light: #09090b;    /* Inverted text when placed on bright white elements */
+
+  /* Status Accents (Monochrome Inversions) */
+  --color-success: #ffffff;
+  --color-success-bg: rgba(255, 255, 255, 0.1);
+  --color-warning: #e4e4e7;
+  --color-warning-bg: rgba(255, 255, 255, 0.1);
+  --color-danger: #ffffff;
+  --color-danger-bg: rgba(255, 255, 255, 0.1);
+  --color-info: #ffffff;
+  --color-info-bg: rgba(255, 255, 255, 0.1);
+
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.8);
+  --shadow-md: 0 6px 20px -2px rgba(0, 0, 0, 0.95), 0 0 0 1px #27272a;
+  --shadow-lg: 0 20px 48px -6px rgba(0, 0, 0, 0.98), 0 0 0 1px #3f3f46;
+}

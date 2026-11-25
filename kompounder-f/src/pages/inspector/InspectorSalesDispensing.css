@@ -1,0 +1,99 @@
+/* Inspector Sales & Dispensing Page Layout */
+.inspector-sales-dispensing-view {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Header */
+.sales-page-header {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(7, 25, 51, 0.04);
+  margin-bottom: 28px;
+}
+
+.sales-page-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 4px 0;
+}
+
+.sales-page-subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 680px;
+}
+
+.sales-header-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Pharmacy Selector Card */
+.sales-selector-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(7, 25, 51, 0.04);
+  margin-bottom: 28px;
+}
+
+.sales-search-input-wrapper {
+  position: relative;
+  width: 360px;
+  display: flex;
+  align-items: center;
+}
+
+.sales-search-input {
+  width: 100%;
+  padding: 8px 32px 8px 36px;
+  font-size: var(--font-size-xs);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.sales-search-input:focus {
+  border-color: var(--color-secondary);
+}
+
+/* Sales Table Card */
+.sales-table-card {
+  margin-bottom: 28px;
+}
+
+.sales-table-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.cell-sub-id {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,66 @@
+/* Inspector Compliance & Alerts Page Layout */
+.inspector-compliance-view {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Header */
+.compliance-page-header {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(7, 25, 51, 0.04);
+  margin-bottom: 28px;
+}
+
+.compliance-page-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 4px 0;
+}
+
+.compliance-page-subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 680px;
+}
+
+.compliance-header-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge-warning-count {
+  background-color: var(--color-warning-bg) !important;
+  color: var(--color-warning) !important;
+  border-color: rgba(180, 83, 9, 0.2) !important;
+}
+
+.badge-danger-count {
+  background-color: var(--color-danger-bg) !important;
+  color: var(--color-danger) !important;
+  border-color: rgba(220, 38, 38, 0.2) !important;
+}
+
+.alert-row {
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.alert-row.row-selected {
+  background-color: rgba(180, 83, 9, 0.05) !important;
+}
+
+.missing-updates-card,
+.antibiotic-threshold-card,
+.irregular-activity-card {
+  margin-bottom: 28px;
+}

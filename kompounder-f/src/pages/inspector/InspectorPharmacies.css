@@ -1,0 +1,392 @@
+/* Inspector Pharmacies Page Layout */
+.inspector-pharmacies-view {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Header */
+.pharmacies-page-header {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(7, 25, 51, 0.04);
+  margin-bottom: 28px;
+}
+
+.pharmacies-page-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 4px 0;
+}
+
+.pharmacies-page-subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 680px;
+}
+
+.pharmacies-header-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-stat-chip {
+  background-color: rgba(7, 25, 51, 0.04);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-stat-chip.chip-success {
+  background-color: var(--color-success-bg);
+  border-color: rgba(21, 128, 61, 0.2);
+}
+
+.header-stat-chip.chip-success .stat-value {
+  color: var(--color-success);
+}
+
+.header-stat-chip.chip-warning {
+  background-color: var(--color-warning-bg);
+  border-color: rgba(180, 83, 9, 0.2);
+}
+
+.header-stat-chip.chip-warning .stat-value {
+  color: var(--color-warning);
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+/* Controls & Filter Bar */
+.pharmacies-controls-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(7, 25, 51, 0.04);
+  margin-bottom: 28px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-muted);
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 32px 8px 36px;
+  font-size: var(--font-size-xs);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.search-input:focus {
+  border-color: var(--color-secondary);
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.filter-status-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-pill {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-pill:hover {
+  border-color: var(--color-secondary-light);
+  color: var(--color-primary-dark);
+}
+
+.filter-pill.active {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+/* Pharmacies Table Adjustments */
+.pharmacies-table-card {
+  margin-bottom: 28px;
+}
+
+.pharmacy-row {
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.pharmacy-row.row-selected {
+  background-color: rgba(12, 130, 124, 0.05) !important;
+}
+
+.pharmacy-cell-name {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.cell-sub-license {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.pharmacy-cell-pharmacist {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.cell-sub-reg {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.warning-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-danger);
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.btn-inspect-action {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--color-secondary);
+  background-color: transparent;
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-inspect-action:hover,
+.btn-inspect-action.btn-inspect-active {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+.empty-table-cell {
+  padding: 32px !important;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+/* Selected Pharmacy Inspection Detail Card */
+.pharmacy-detail-card {
+  margin-bottom: 28px;
+  border: 1px solid var(--color-secondary-light);
+}
+
+.detail-card-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: rgba(12, 130, 124, 0.02);
+}
+
+.detail-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.detail-pharmacy-name {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+.license-pill {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-primary);
+  background-color: rgba(15, 46, 89, 0.08);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.detail-pharmacy-address {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+  display: block;
+}
+
+.detail-header-score {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.score-num {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.score-label {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+}
+
+.detail-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Detail Info Grid */
+.detail-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.info-box {
+  background-color: rgba(7, 25, 51, 0.02);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-box-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-box-main {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.info-box-sub {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+/* Sub-sections */
+.section-subtitle-heading {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detail-alerts-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-sales-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sales-subtable th {
+  background-color: rgba(7, 25, 51, 0.03);
+  font-size: 10px;
+}
+
+.category-pill {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+
+.cat-antibiotic {
+  background-color: rgba(12, 130, 124, 0.08);
+  color: var(--color-secondary);
+  border: 1px solid rgba(12, 130, 124, 0.2);
+}
+
+.cat-narcotic {
+  background-color: rgba(180, 83, 9, 0.08);
+  color: var(--color-warning);
+  border: 1px solid rgba(180, 83, 9, 0.2);
+}

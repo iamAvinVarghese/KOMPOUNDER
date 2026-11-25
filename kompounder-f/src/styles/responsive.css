@@ -1,0 +1,29 @@
+/* Genuinely Global Responsive Rules */
+
+/* Scale baseline font-sizes on very large screens */
+@media (min-width: 1440px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+/* Base adjustment for smaller desktop viewports */
+@media (max-width: 1280px) {
+  :root {
+    font-size: 15px;
+  }
+}
+
+/* Base adjustment for tablets/laptops */
+@media (max-width: 1024px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+/* Global scroll behavior adjustments for viewport changes */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
